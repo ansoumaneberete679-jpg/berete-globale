@@ -1,0 +1,75 @@
+import Link from "next/link";
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-white text-[#001B5E] font-sans">
+      <nav className="flex justify-between items-center p-4 shadow-md bg-white sticky top-0 z-50">
+        <div className="flex items-center gap-2">
+          <div className="w-10 h-10 bg-[#001B5E] rounded-full flex items-center justify-center text-white font-bold">BG</div>
+          <span className="font-bold text-xl">BÉRÉTÉ GLOBALE</span>
+        </div>
+        <div className="flex gap-4">
+          <Link href="/login" className="text-[#007BFF] font-bold py-2">Se connecter</Link>
+          <Link href="/register" className="bg-[#007BFF] text-white px-4 py-2 rounded-lg font-bold">Créer un compte</Link>
+        </div>
+      </nav>
+
+      <section className="text-center py-16 px-4 bg-gradient-to-b from-blue-50 to-white">
+        <h1 className="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
+          L'intelligence au service de <span className="text-[#007BFF]">vos ambitions.</span>
+        </h1>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          La plateforme SaaS internationale propulsée par l'IA pour les étudiants, les entrepreneurs et les entreprises.
+        </p>
+        <div className="flex flex-col md:flex-row justify-center gap-4">
+          <Link href="#services" className="bg-[#001B5E] text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-blue-800 transition">
+            Découvrir nos services
+          </Link>
+          <Link href="/register" className="border-2 border-[#001B5E] text-[#001B5E] px-8 py-3 rounded-full font-bold text-lg hover:bg-blue-50 transition">
+            Commencer gratuitement
+          </Link>
+        </div>
+      </section>
+
+      <section id="services" className="py-16 px-4 max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-12">Nos Solutions SaaS</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div className="border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <h3 className="text-xl font-bold mb-2 text-[#007BFF]">BÉRÉTÉ AI ASSISTANT</h3>
+            <p className="text-gray-600">Rédaction professionnelle, résumés, traductions et aide à la décision par Intelligence Artificielle.</p>
+          </div>
+
+          <div className="border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <h3 className="text-xl font-bold mb-2 text-[#007BFF]">BÉRÉTÉ CV BUILDER</h3>
+            <p className="text-gray-600">Créez des CV et lettres de motivation professionnels en français et en anglais, exportables en PDF.</p>
+          </div>
+
+          <div className="border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <h3 className="text-xl font-bold mb-2 text-[#007BFF]">BÉRÉTÉ BUSINESS</h3>
+            <p className="text-gray-600">Générez des idées, des business plans et des stratégies marketing pour votre entreprise.</p>
+          </div>
+
+          <div className="border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <h3 className="text-xl font-bold mb-2 text-[#007BFF]">BÉRÉTÉ TRANSLATE</h3>
+            <p className="text-gray-600">Traduction multilingue avec explication des expressions et préparation pour les langues africaines.</p>
+          </div>
+
+          <div className="border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <h3 className="text-xl font-bold mb-2 text-[#007BFF]">BÉRÉTÉ ACADEMY</h3>
+            <p className="text-gray-600">Formations en IA, entrepreneuriat, marketing numérique et cybersécurité avec certificats.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <footer className="bg-[#001B5E] text-white py-12 px-4 text-center">
+        <div className="mb-6">
+          <h3 className="text-2xl font-bold mb-2">BÉRÉTÉ GLOBALE</h3>
+          <p className="text-gray-300">L'intelligence au service de vos ambitions.</p>
+        </div>
+        <p className="text-xs text-gray-500">© 2024 BÉRÉTÉ GLOBALE. Tous droits réservés. Siège : Guinée.</p>
+      </footer>
+    </main>
+  );
+}
